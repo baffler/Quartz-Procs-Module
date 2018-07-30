@@ -1,0 +1,36 @@
+﻿## Interface: 80000 
+## Title: Quartz |cff7777ffProcs|r
+## Notes: Quartz module to display procs, class abilities, buffs, and cooldowns, displayed on the Mirror bar.
+## Title-zhTW: Quartz |cff7777ff特效|r
+## Notes-zhTW: Quartz 在映射施法條顯示特效、職業能力、增益狀態和冷卻模組。
+## Title-zhCN: Quartz |cff7777ff特效|r
+## Notes-zhCN: Quartz 在镜像条显示特效、职业能力、增益状态和冷却模块。
+## Author: Baffler
+## Version: 3.50
+## Dependencies: Quartz
+## X-License: GPL v3
+## X-Quartz-Module: Procs
+## X-Quartz-RequiredModules: Mirror
+## OptionalDeps: Ace3, LibSharedMedia-3.0, SharedMedia
+## X-Curse-Packaged-Version: v3.50
+## X-Curse-Project-Name: Quartz: Procs Module
+## X-Curse-Project-ID: quartz_procs
+## X-Curse-Repository-ID: wow/quartz_procs/mainline
+## X-Curse-Packaged-Version: r49
+## X-Curse-Project-Name: Quartz: Procs Module
+## X-Curse-Project-ID: quartz_procs
+## X-Curse-Repository-ID: wow/quartz_procs/mainline
+
+quartzprocs.lua
+
+classes\deathknight.lua
+classes\druid.lua
+classes\hunter.lua
+classes\mage.lua
+classes\monk.lua
+classes\paladin.lua
+classes\priest.lua
+classes\rogue.lua
+classes\shaman.lua
+classes\warlock.lua
+classes\warrior.lua

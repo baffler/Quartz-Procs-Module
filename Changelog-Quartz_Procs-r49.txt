@@ -1,0 +1,15 @@
+------------------------------------------------------------------------
+r49 | baffle | 2015-09-25 20:26:34 +0000 (Fri, 25 Sep 2015) | 2 lines
+Changed paths:
+   M /trunk/Quartz_Procs.toc
+   M /trunk/quartzprocs.lua
+
+Added debuff toggle for custom Procs
+Added SPELL_AURA_APPLIED event for custom Triggers
+------------------------------------------------------------------------
+r48 | baffle | 2014-12-28 15:25:56 +0000 (Sun, 28 Dec 2014) | 1 line
+Changed paths:
+   M /trunk/quartzprocs.lua
+
+fixed combatlog procs bug
+------------------------------------------------------------------------
