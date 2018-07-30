@@ -6,13 +6,13 @@
 ## Title-zhCN: Quartz |cff7777ff特效|r
 ## Notes-zhCN: Quartz 在镜像条显示特效、职业能力、增益状态和冷却模块。
 ## Author: Baffler
-## Version: 3.50
+## Version: 3.51
 ## Dependencies: Quartz
 ## X-License: GPL v3
 ## X-Quartz-Module: Procs
 ## X-Quartz-RequiredModules: Mirror
 ## OptionalDeps: Ace3, LibSharedMedia-3.0, SharedMedia
-## X-Curse-Packaged-Version: v3.50
+## X-Curse-Packaged-Version: v3.51
 ## X-Curse-Project-Name: Quartz: Procs Module
 ## X-Curse-Project-ID: quartz_procs
 ## X-Curse-Repository-ID: wow/quartz_procs/mainline

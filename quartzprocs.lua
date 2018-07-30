@@ -18,7 +18,7 @@
 ]]
 
 local MAJOR_VERS = 3
-local MINOR_VERS = 50
+local MINOR_VERS = 51
 local vers = tostring(MAJOR_VERS) .. "." .. tostring(MINOR_VERS)
 
 
