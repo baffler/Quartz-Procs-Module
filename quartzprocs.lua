@@ -18,7 +18,7 @@
 ]]
 
 local MAJOR_VERS = 3
-local MINOR_VERS = 51
+local MINOR_VERS = 6
 local vers = tostring(MAJOR_VERS) .. "." .. tostring(MINOR_VERS)
 
 
@@ -42,22 +42,10 @@ local defaults = {
 		procMode = false,
 		cooldowns = { },
 		spells = {
-			[string.lower(GetSpellInfo(32182))] = {
-				enabled = true, name = GetSpellInfo(32182),
-				color = {1, 0.65, 0}, ptype = "custom",
-			}, -- Heroism
-			[string.lower(GetSpellInfo(2825))] = {
-				enabled = true, name = GetSpellInfo(2825),
-				color = {1, 0.65, 0}, ptype = "custom",
-			},-- Bloodlust
-			[string.lower(GetSpellInfo(80353))] = {
-				enabled = true, name = GetSpellInfo(80353),
-				color = {1, 0.65, 0}, ptype = "custom",
-			},-- Time Warp
-			[string.lower(GetSpellInfo(90355))] = {
-				enabled = true, name = GetSpellInfo(90355),
-				color = {1, 0.65, 0}, ptype = "custom",
-			},-- Ancient Hysteria
+			[string.lower(GetSpellInfo(29166))] = {
+				enabled = true, name = GetSpellInfo(29166),
+				color = {0,0.67,0.88}, ptype = "custom",
+			}, -- Innervate
 		},
 	}
 }
@@ -255,8 +243,8 @@ function QuartzProcs:UNIT_AURA(event, unit)
 end
 
 function QuartzProcs:COMBAT_LOG_EVENT_UNFILTERED(event, ...)
-	local timestamp, eventType, hideCaster, sourceGUID, sourceName, sourceFlags, sourceRaidFlags, destGUID, destName, destFlags, destRaidFlags = select(1, ...)
-
+	local timestamp, eventType, hideCaster, sourceGUID, sourceName, sourceFlags, sourceRaidFlags, destGUID, destName, destFlags, destRaidFlags = select(1, CombatLogGetCurrentEventInfo())
+	
 	if (event == "COMBAT_LOG_EVENT_UNFILTERED") then
 		if ((GetTime() - combatThrottle) > 10) then
 			self:DEBUGPRINT("COMBAT_LOG_EVENT_UNFILTERED")
@@ -264,7 +252,7 @@ function QuartzProcs:COMBAT_LOG_EVENT_UNFILTERED(event, ...)
 		end
 		
 		if (sourceGUID == UnitGUID("player")) then --check if the player is casting the spell
-			local spellID, spellname, spellSchool = select(12, ...)
+			local spellID, spellname, spellSchool = select(12, CombatLogGetCurrentEventInfo())
 			if (spellID ~= nil) and (spellID ~= "") then spellID = tostring(spellID) end
 
 			if (db.procMode ~= nil) and (db.procMode == true) then
@@ -1477,7 +1465,7 @@ do
 						args = {
 							mProcModeHelp = {
 								type = 'description',
-								name = 'Toggle the option below to show spells that you have cast. Displays Spell IDs and Events for each spell you cast in chat.',
+								name = 'Toggle the option below to show spells that you have cast. Displays Spell IDs and Events for each spell you cast in chat. Note: For Classic WoW spell ID will always be 0 for combat log',
 								order = 1,
 							},
 							mProcMode = {
@@ -1690,6 +1678,7 @@ do
 								name = "Add Trigger",
 								desc = "Add a New Custom Trigger. This timer is triggered by a combat log event",
 								order = 3,
+								disabled = true,
 								args = {
 									clcustomNameHelp = {
 										type = 'description',

@@ -18,9 +18,6 @@ function QuartzProcs:returnProcList()
 		["31884"] = { color={1,0.5,0}, },			-- Avenging Wrath
 		["31850"] = { color={1,0.5,0}, },			-- Ardent Defende
 		["2812"]  = { color={0.93,0.98,0.51}, },	-- Denounce
-		
-		["combatlog"] = {
-			["25771"] = { color={1,0,0}, dur=120, }, -- Forbearance (debuff)
-		}
+		["25771"] = { color={1,0,0}, debuff=true, }, -- Forbearance (debuff)
 	}
 end
