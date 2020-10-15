@@ -22,7 +22,7 @@ function QuartzProcs:returnProcList()
 		["79683"] = { color={1,0,0.5}, },				-- Arcane Missiles!
 	
 		["combatlog"] = {
-			["55342"] = { color={0,0.5,1}, dur=30, }, 	-- Mirror Image
+			["55342"] = { color={0,0.5,1}, dur=40, }, 	-- Mirror Image
 			["41425"] = { color={1,0,0}, dur=30, }, 	-- Hypothermia
 		}
 	}

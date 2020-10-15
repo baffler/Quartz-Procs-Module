@@ -1,4 +1,4 @@
-﻿## Interface: 90001 
+## Interface: 90001 
 ## Title: Quartz |cff7777ffProcs|r
 ## Notes: Quartz module to display procs, class abilities, buffs, and cooldowns, displayed on the Mirror bar.
 ## Title-zhTW: Quartz |cff7777ff特效|r
@@ -6,13 +6,13 @@
 ## Title-zhCN: Quartz |cff7777ff特效|r
 ## Notes-zhCN: Quartz 在镜像条显示特效、职业能力、增益状态和冷却模块。
 ## Author: Baffler
-## Version: 3.61
+## Version: 3.62
 ## Dependencies: Quartz
 ## X-License: GPL v3
 ## X-Quartz-Module: Procs
 ## X-Quartz-RequiredModules: Mirror
 ## OptionalDeps: Ace3, LibSharedMedia-3.0, SharedMedia
-## X-Curse-Packaged-Version: v3.61
+## X-Curse-Packaged-Version: v3.62
 ## X-Curse-Project-Name: Quartz: Procs Module
 ## X-Curse-Project-ID: quartz_procs
 ## X-Curse-Repository-ID: wow/quartz_procs/mainline
