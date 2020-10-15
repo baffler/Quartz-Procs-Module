@@ -18,7 +18,7 @@
 ]]
 
 local MAJOR_VERS = 3
-local MINOR_VERS = 62
+local MINOR_VERS = 63
 local vers = tostring(MAJOR_VERS) .. "." .. tostring(MINOR_VERS)
 
 
@@ -267,11 +267,11 @@ function QuartzProcs:COMBAT_LOG_EVENT_UNFILTERED(event, ...)
 			local spellID, spellname, spellSchool = select(12, CombatLogGetCurrentEventInfo())
 			if (spellID ~= nil) and (spellID ~= "") then spellID = tostring(spellID) end
 
-			--if (db.procMode ~= nil) and (db.procMode == true) then
+			if (db.procMode ~= nil) and (db.procMode == true) then
 				print("-- " .. tostring(spellname) .. " id: "..tostring(spellID))
 				print("- event = " .. tostring(eventType))
 				print("----")
-			--end
+			end
 			
 			-- cooldown check 
 			-- ignore SPELL_CAST_FAILED cause it gets called if you spam the button and its not off cooldown
